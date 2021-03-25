@@ -1,0 +1,355 @@
+{% extends 'basic.html' %}
+{% load static %}
+{% block content %}
+ <div class="breadcrumb-area breadcrumb-area-padding-2 bg-gray-2">
+            <div class="custom-container">
+                <div class="breadcrumb-content text-center">
+                    <ul>
+                        <li>
+                            <a href="/home">Home</a>
+                        </li>
+                        <li class="active">My Account</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="my-account-area pt-75 pb-75">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!-- My Account Page Start -->
+                        <div class="myaccount-page-wrapper">
+                            <!-- My Account Tab Menu Start -->
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="myaccount-tab-menu nav" role="tablist">
+                                        <a href="#dashboad" class="active" data-toggle="tab">Dashboard</a>
+                                        <a href="#doctors" data-toggle="tab">Doctor Appointments</a>
+                                        <a href="#homecollection" data-toggle="tab">Home Collection</a>
+                                        <a href="#orders" data-toggle="tab">Orders</a>
+                                        <a href="#download" data-toggle="tab">Download Reports</a>
+                                        <a href="#address-edit" data-toggle="tab">Address</a>
+                                        <a href="#account-info" data-toggle="tab">Account Details</a>
+                                        <a href="/signin">Logout</a>
+                                    </div>
+                                </div>
+                                <!-- My Account Tab Menu End -->
+                                <!-- My Account Tab Content Start -->
+                                <div class="col-lg-9 col-md-9">
+                                    <div class="tab-content" id="myaccountContent">
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade show active" id="dashboad" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="welcome">
+                                                    <p>Hello, <strong>Rayed</strong> (Not <strong>Rayed !</strong><a href="login-register.html" class="logout"> Logout</a>)</p>
+                                                </div>
+
+                                                <p class="mb-0">From your account dashboard you can view your <a href="#">recent orders</a> , appointments, home collection schedules and manage your <a href="#">shipping and billing addresses</a> , and <a href="#">edit your password and account details</a></p>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="doctors" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>S. No.</th>
+                                                                <th>Doctor</th>
+                                                                <th>Appointment Date</th>
+                                                                <th>Time Slot</th>
+                                                                <th>Status</th>
+                                                                <th>Total</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Mr Sharma</td>
+                                                                <td>Aug 22, 2018</td>
+                                                                <td>12:00 PM</td>
+                                                                <td>Pending</td>
+                                                                <td>$3000</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>Mr Sharma</td>
+                                                                <td>July 22, 2018</td>
+                                                                <td>1:00 PM</td>
+                                                                <td>Approved</td>
+                                                                <td>$200</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="homecollection" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>Order No.</th>
+                                                                <th>Date and Time</th>
+                                                                <th>Status</th>
+                                                                <th>Total</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Aug 22, 2018</td>
+                                                                <td>Pending</td>
+                                                                <td>$3000</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>July 22, 2018</td>
+                                                                <td>Approved</td>
+                                                                <td>$200</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab-pane fade" id="orders" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>Order No.</th>
+                                                                <th>Date</th>
+                                                                <th>Status</th>
+                                                                <th>Total</th>
+                                                                <th>Action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1</td>
+                                                                <td>Aug 22, 2018</td>
+                                                                <td>Pending</td>
+                                                                <td>$3000</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>2</td>
+                                                                <td>July 22, 2018</td>
+                                                                <td>Approved</td>
+                                                                <td>$200</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>3</td>
+                                                                <td>June 12, 2017</td>
+                                                                <td>On Hold</td>
+                                                                <td>$990</td>
+                                                                <td><a href="cart.html" class="check-btn sqr-btn ">View</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="download" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="myaccount-table table-responsive text-center">
+                                                    <table class="table table-bordered">
+                                                        <thead class="thead-light">
+                                                            <tr>
+                                                                <th>Report Name</th>
+                                                                <th>Date</th>
+                                                                <th>Download</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>Haven </td>
+                                                                <td>Aug 22, 2018</td>
+                                                                <td><a href="#" class="check-btn sqr-btn "><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>HasTech </td>
+                                                                <td>Sep 12, 2018</td>
+                                                                <td><a href="#" class="check-btn sqr-btn "><i class="fa fa-cloud-download"></i> Download File</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="address-edit" role="tabpanel">
+                                            <div class="myaccount-content myaccount-address">
+                                                <p> The following addresses will be used on the checkout page by default.</p>
+                                                <div class="row">
+                                                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                                                        <div class="myaccount-address-wrap">
+                                                            <h3>Billing address</h3>
+                                                            <div class="myaccount-address-content">
+                                                                <h4>Alex Tuntuni</h4>
+                                                                <p>1355 Market St, Suite 900 <br>San Francisco, CA 94103</p>
+                                                                <p>Mobile: (123) 456-7890</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6 col-md-6 col-12 col-sm-6">
+                                                        <div class="myaccount-address-wrap">
+                                                            <h3>Shipping address</h3>
+                                                            <div class="myaccount-address-content">
+                                                                <h4>Alex Tuntuni</h4>
+                                                                <p>1355 Market St, Suite 900 <br>San Francisco, CA 94103</p>
+                                                                <p>Mobile: (123) 456-7890</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Single Tab Content End -->
+                                        <!-- Single Tab Content Start -->
+                                        <div class="tab-pane fade" id="account-info" role="tabpanel">
+                                            <div class="myaccount-content">
+                                                <div class="account-details-form">
+                                                    <form action="#">
+                                                        <div class="row">
+                                                            <div class="col-lg-6">
+                                                                <div class="account-info input-style">
+                                                                    <label>First name *</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6">
+                                                                <div class="account-info input-style">
+                                                                    <label>Last name *</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 pt-10">
+                                                                <div class="account-info input-style">
+                                                                    <label>Phone *</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-lg-6 pt-10">
+                                                                <div class="account-info input-style">
+                                                                    <label>Email *</label>
+                                                                    <input type="text">
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                        <div class="account-info-btn mt-20">
+                                                            <button>Save Changes</button>
+                                                        </div>
+                                                    </form>
+                                    <div class="customer-zone mb-30 mt-30">
+                                        <p class="cart-page-title">Want to change your password?
+                                        <a class="checkout-click3" href="pwd">Click here</a></p>
+                                        <div class="checkout-login-info3 input-style">
+                                            <form action="pwd">
+                                                <fieldset>
+                                                    <legend>Password change</legend>
+                                                    <div class="row">
+                                                        <div class="col-lg-12">
+                                                            <div class="account-info input-style mb-30">
+                                                                <label>Current password</label>
+                                                                <input type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="account-info input-style mb-30">
+                                                                <label>New password</label>
+                                                                <input type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="account-info input-style">
+                                                                <label>Confirm new password</label>
+                                                                <input type="text">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-12">
+                                                            <div class="account-info input-style">
+                                                                <label>Confirm new password</label>
+                                                                <input type="text">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                            <div class="account-info-btn mt-20">
+                                                <button>Save Changes</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- Single Tab Content End -->
+                                    </div>
+                                </div> <!-- My Account Tab Content End -->
+                            </div>
+                        </div> <!-- My Account Page End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+<script>
+function appointments(order){
+    return('<div class="order-summary-middle"><ul><li>Subtotal <h4>&#8377; '+ order.total_amount +' </h4></li><li>Home Collection Charges<h4><span>Free</span><span class="price"> &#8377; 0.00</span></h4></li></ul></div><div class="order-summary-bottom"><h4>Total <span>&#8377;  '+ order.total_amount +' </span></h4></div>');
+}
+
+$(document).ready(function(){
+        function getCookie() {
+            var name = "bToken=";
+            var decodedCookie = decodeURIComponent(document.cookie);
+            var ca = decodedCookie.split(';');
+            for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+        $.ajax({
+            url  : "http://127.0.0.1:8000/profile",
+            type : "GET",
+            beforeSend: function(request) {
+                request.setRequestHeader('Authorization', 'Token ' + getCookie()+'');
+            },
+            processData: false,
+            contentType: false,
+            success:function(data){
+                console.log('sucesss',data);
+                document.getElementById("appointments").innerHTML = appointments(data);
+                if(data.Appointments !== null){
+                    for(var i=0; i<data.Appointments.length; i++){
+                        document.getElementById("appointments").innerHTML += appointments(data[i]);
+                    }
+                }
+            },
+            error: function () {
+                window.location="/signin";
+                $("#loginmodalbox").modal('show');
+            }
+        });
+    });
+</script>
+{% endblock %}
